@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'INXConnection_Example' do
+  pod 'INXConnection', :path => '../'
+
+  target 'INXConnection_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
