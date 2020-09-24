@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'INXConnection_Example' do
   pod 'INXConnection', :path => '../'
-
+  pod 'OHHTTPStubs/Swift' 
   target 'INXConnection_Tests' do
     inherit! :search_paths
 

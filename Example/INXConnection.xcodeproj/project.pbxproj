@@ -14,6 +14,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		9CB1208E251D56B800737157 /* Mockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1208D251D56B800737157 /* Mockup.swift */; };
+		9CB12095251D648200737157 /* get.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB12092251D63FA00737157 /* get.json */; };
+		9CB1209A251D64BF00737157 /* get.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB12092251D63FA00737157 /* get.json */; };
 		F54C7BA9DA98CEF7B429305A /* Pods_INXConnection_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C305A1C0AD663DF50FD3AC2 /* Pods_INXConnection_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		777BF63AD64C4A8F2305A99F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		815ADE8683F550B407638871 /* Pods-INXConnection_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INXConnection_Example.release.xcconfig"; path = "Target Support Files/Pods-INXConnection_Example/Pods-INXConnection_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9CB1208D251D56B800737157 /* Mockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockup.swift; sourceTree = "<group>"; };
+		9CB12092251D63FA00737157 /* get.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get.json; sourceTree = "<group>"; };
 		B49E27A28793B0CFFDE31198 /* Pods-INXConnection_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INXConnection_Tests.release.xcconfig"; path = "Target Support Files/Pods-INXConnection_Tests/Pods-INXConnection_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D6CD1E53571DD8F47954A4EE /* INXConnection.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = INXConnection.podspec; path = ../INXConnection.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,12 +118,15 @@
 		607FACD21AFB9204008FA782 /* Example for INXConnection */ = {
 			isa = PBXGroup;
 			children = (
+				9CB12092251D63FA00737157 /* get.json */,
+				9CB12091251D63B000737157 /* mock */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				9CB1208D251D56B800737157 /* Mockup.swift */,
 			);
 			name = "Example for INXConnection";
 			path = INXConnection;
@@ -157,6 +165,13 @@
 				777BF63AD64C4A8F2305A99F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		9CB12091251D63B000737157 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB1209A251D64BF00737157 /* get.json in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -258,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB12095251D648200737157 /* get.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +311,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-INXConnection_Example/Pods-INXConnection_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/INXConnection/INXConnection.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/INXConnection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB1208E251D56B800737157 /* Mockup.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

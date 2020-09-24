@@ -8,7 +8,6 @@
 
 import UIKit
 import INXConnection
-
 struct Employees: Codable {
     let id : Int
     let employee_name: String
@@ -38,6 +37,7 @@ class ViewController: UIViewController {
     
     @IBAction func didTapGET(_ sender: Any) {
         APIManager.shared.setHeader(key: "ARP", value: "calue")
+        Mockup().get(uri: "/api/v1/employees")
         APIManager.shared.get(uri: "/employees") { (result: Result<[Employees], APIManagerError>) in
             switch result {
             case .success(let todo):

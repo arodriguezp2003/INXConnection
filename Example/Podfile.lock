@@ -1,8 +1,26 @@
 PODS:
   - INXConnection (0.1.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
 
 DEPENDENCIES:
   - INXConnection (from `../`)
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
 
 EXTERNAL SOURCES:
   INXConnection:
@@ -10,7 +28,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   INXConnection: a299fd86ea54d2b1f1b6d5928bda521571dbfe35
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
-PODFILE CHECKSUM: 081bc5d5d93492d4fcf1f15cf0db1cb8e0827271
+PODFILE CHECKSUM: 1ab5f629368ff729759bc3790aa18da63f3428da
 
 COCOAPODS: 1.8.4
