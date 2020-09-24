@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import INXConnection
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        APIManager.shared.configure("http://dummy.restapiexample.com/api/v1", resultCode: "success")
         return true
     }
 
