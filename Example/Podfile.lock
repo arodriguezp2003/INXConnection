@@ -1,0 +1,16 @@
+PODS:
+  - INXConnection (0.1.0)
+
+DEPENDENCIES:
+  - INXConnection (from `../`)
+
+EXTERNAL SOURCES:
+  INXConnection:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  INXConnection: a299fd86ea54d2b1f1b6d5928bda521571dbfe35
+
+PODFILE CHECKSUM: 081bc5d5d93492d4fcf1f15cf0db1cb8e0827271
+
+COCOAPODS: 1.8.4
