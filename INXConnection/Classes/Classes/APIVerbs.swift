@@ -98,15 +98,15 @@ extension APIManager {
                             return
                         }
                     
-                        guard let payload  = decode.data else {
+                        guard let payload  = decode.payload else {
                             completion(.failure(.init(.NO_PAYLOAD, statusCode)))
                             return
                         }
                         
-                        if decode.status == self.SUCCESSRESULTCODE {
+                        if decode.code == "OK" {
                             completion(.success(payload))
                         } else {
-                            completion(.failure(.init(.INVALID_RESPONSE, message: decode.message ?? "", statusCode)))
+                            completion(.failure(.init(.INVALID_RESPONSE, message: decode.description ?? "", statusCode)))
                         }
                     } else {
                         guard let decode =  try? JSONDecoder().decode(T.self, from: data) else {

@@ -4,8 +4,8 @@ public protocol APIMannagerProtocol {
     /// Configuración para proyectos ionix
     /// - Parameters:
     ///   - URLBase: url base del backend
-    ///   - resultCode: String que reponde el servicio cuando esta ok "success" "ok"
-    func configure(_ URLBase: String, resultCode: String)
+    ///   - ionixServer: contratos de backend payload
+    func configure(_ URLBase: String, ionixServer: Bool)
     
     /// Confuguración para proyectos externos a ionix
     /// - Parameter URLBase: url base del backend
@@ -52,13 +52,11 @@ public class APIManager: APIMannagerProtocol {
     public static let shared: APIMannagerProtocol = APIManager()
     static var headers: [String: String] = [:]
     var BASE = ""
-    var SUCCESSRESULTCODE = ""
     var ionixServer = false
     let defaultSession = URLSession(configuration: .default)
    
-    public func configure(_ URLBase: String, resultCode: String) {
+    public func configure(_ URLBase: String, ionixServer: Bool) {
         self.BASE = URLBase
-        self.SUCCESSRESULTCODE = resultCode
         self.ionixServer = true
     }
     public func configure(_ URLBase: String) {

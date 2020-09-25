@@ -17,6 +17,7 @@
 		9CB1208E251D56B800737157 /* Mockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1208D251D56B800737157 /* Mockup.swift */; };
 		9CB12095251D648200737157 /* get.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB12092251D63FA00737157 /* get.json */; };
 		9CB1209A251D64BF00737157 /* get.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB12092251D63FA00737157 /* get.json */; };
+		9CB1209D251D691D00737157 /* Mockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1208D251D56B800737157 /* Mockup.swift */; };
 		F54C7BA9DA98CEF7B429305A /* Pods_INXConnection_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C305A1C0AD663DF50FD3AC2 /* Pods_INXConnection_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +119,6 @@
 		607FACD21AFB9204008FA782 /* Example for INXConnection */ = {
 			isa = PBXGroup;
 			children = (
-				9CB12092251D63FA00737157 /* get.json */,
 				9CB12091251D63B000737157 /* mock */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -126,7 +126,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				9CB1208D251D56B800737157 /* Mockup.swift */,
 			);
 			name = "Example for INXConnection";
 			path = INXConnection;
@@ -170,6 +169,8 @@
 		9CB12091251D63B000737157 /* mock */ = {
 			isa = PBXGroup;
 			children = (
+				9CB1208D251D56B800737157 /* Mockup.swift */,
+				9CB12092251D63FA00737157 /* get.json */,
 			);
 			name = mock;
 			sourceTree = "<group>";
@@ -362,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB1209D251D691D00737157 /* Mockup.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
